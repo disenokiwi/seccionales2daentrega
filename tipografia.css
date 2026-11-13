@@ -1,0 +1,89 @@
+:root{--fs-xs:clamp(14px,1.1vw,15px);--fs-s:clamp(15px,1.15vw,17px);--fs-b:clamp(16px,1.3vw,19px);--fs-l:clamp(18px,1.6vw,21px);--fs-h4:clamp(21px,2vw,26px);--fs-h3:clamp(26px,2.8vw,34px);--fs-sec:clamp(32px,4.2vw,46px);--fs-num:clamp(50px,6vw,72px);--fs-num2:clamp(32px,3.6vw,40px);}
+   xs  12   etiquetas en mayúscula, ejes, insignias, contadores
+   s   14   notas, fuentes, subtítulos de gráfico, leyendas, chips
+   b   16   texto de tarjetas, listas, párrafos
+   l   17-19 introducciones y frases clave
+   h4  20-24 títulos de bloque, de gráfico y de tarjeta
+   h3  26-32 subtítulos de sección
+   num 72 / num2 40   cifras grandes / secundarias
+   Pesos: 400 texto · 700 etiquetas · 800 títulos y negritas · 300 solo en los títulos de sección */
+:root{
+  --fs-xs:12px;
+  --fs-s:14px;
+  --fs-b:16px;
+  --fs-l:clamp(17px,1.5vw,19px);
+  --fs-h4:clamp(20px,1.9vw,24px);
+  --fs-h3:clamp(26px,2.8vw,32px);
+  --fs-sec:clamp(32px,4.2vw,44px);
+  --fs-num:clamp(50px,6vw,72px);
+  --fs-num2:clamp(32px,3.6vw,40px);
+}
+
+/* xs · etiquetas */
+.hero-kicker,.dumb .fila.head span,.cap .fila.head span,.gob .fila.head span,.dt.ax span,.pr em,.bd,.ctabs em,.cd-tag,.kicker,.section-label,
+.resumen .hero-cifra span,.chip-count,.cnum,.tl-d,.region-key span+span{font-size:var(--fs-xs)!important}
+.hero-kicker,.dumb .fila.head span,.cap .fila.head span,.gob .fila.head span,.kicker,.section-label,.resumen .hero-cifra span{font-weight:700!important}
+
+/* s · notas y apoyo */
+.fuente,.csub,.chart .csub,.dtx.s,.dumb .leyenda span,.gp small,.gpt small,.cc small,.mayors span,.pk-g li,.pr b,.nota-fuentes,.site-footer p,.site-footer a,
+.conteo,.partido,.canton-hint,.chip,.breadcrumb,.bc-ec,.acta-cta,.cartogram-sub span,.region-key span,.aprob-cap,.gnota,.dk,.dtx,.ds .dtx,.modal-meta,.modal-nota,.mayors figcaption span,.lista-pill{font-size:var(--fs-s)!important}
+.aprob-cap,.dk,.acta-cta{font-weight:700!important}
+
+/* b · texto corriente */
+.lead,.bul li,.rc-card p,.rc-sub,.rc-nota,.cd-bul li,.prox li,.callout p,.callout p span,.aprob p,.cita p+cite,.auts li,.pk-g h5+ul,
+.dn,.cc strong,.gp strong,.ca,.cn,.ck,.cv span,.candidato,.cname,.modal-bullets li,.dv,.gn,.mayors strong,.pt-intro p+p,.ia-p,.lead.block,.sec-bajada{font-size:var(--fs-b)!important}
+.dn,.cc strong,.gp strong,.cname{font-weight:800!important}
+.rc-card.ch p,.rc-card.ch .rc-nota{font-size:var(--fs-b)!important}
+
+/* l · introducciones y frases clave */
+.resumen p,.resumen .intro p,.lead-top,.cand-intro,.pt-intro p,.rc-main,.hl-ok{font-size:var(--fs-l)!important}
+.callout .co-badge b{font-size:var(--fs-l)!important}
+
+/* h4 · títulos de bloque, gráfico y tarjeta */
+.chart h4,.h-ic span,.rc-h,.rc-h span,.pk-g h5,.pk-g h5 span,.pk-iza,.an-t,.icrow-ast2 .lead-b,.gy,.cd-top h3,.res-nombre,.modal-name,.kicker+h2{font-size:var(--fs-h4)!important}
+.chart h4,.h-ic span,.rc-h,.pk-g h5,.an-t,.icrow-ast2 .lead-b{font-weight:800!important}
+
+/* h3 · subtítulos de sección y nombre del panel del mapa */
+.sub,.sub.c,.kicker+h2,.panel h2{font-size:var(--fs-h3)!important}
+
+/* títulos de sección: mismo tamaño en las tres pestañas */
+.sec-head h2 .t1,.sec-head h2 .t2,.sec-head h2 .t1+.t2{font-size:var(--fs-sec)!important}
+
+/* cifras */
+.dv-n,.pn,.resumen .hero-cifra strong,.rc-card.stat2 .dv-n,.aprob .dv-n{font-size:var(--fs-num)!important}
+.dbig,.hero-cifra strong.s{font-size:var(--fs-num2)!important}
+
+/* negritas siempre 800 y a tamaño del texto que las rodea */
+strong,b.rc-n,.lead-b{font-weight:800}
+
+/* frase citada: tamaño de título de bloque */
+.cita p{font-size:var(--fs-h4)!important;font-weight:600}
+/* símbolos y menú */
+.qm,.darr{font-size:var(--fs-h4)!important}
+.menu a,.menu a.on{font-size:var(--fs-s)}
+.rc-card.ch p,.rc-card.ch .rc-nota{font-weight:400!important}
+/* mapa: calendario y barra de actas a la escala */
+.a-txt strong{font-size:var(--fs-h4)!important}
+.a-txt span{font-size:var(--fs-xs)!important}
+.previa-t{font-size:var(--fs-l)!important}
+.tl-years span,.tl-months span{font-size:var(--fs-xs)!important}
+.tl-year{font-size:var(--fs-h3)!important}
+.tl-txt strong{font-size:var(--fs-l)!important;font-weight:800}
+.tl-txt span{font-size:var(--fs-s)!important}
+.sec-bajada p strong,.sec-bajada strong,.lead strong{font-size:inherit!important}
+.ec-panel h2,#panel h2,.panel-prov h2{font-size:var(--fs-h3)!important}
+.cd-n{font-weight:800}
+.region-key span,.tl-years span,.tl-months span,.a-txt span,.vp,.sec-bajada,.toca,.map-hint{font-size:var(--fs-s)!important}
+
+.tl-d,.region-key span,.ec-map+* span,.leyenda span,.legend span,.map-leg span,.hero-kicker{font-size:var(--fs-xs)!important}
+.app span:not([class]){font-size:max(1em,var(--fs-xs))}
+.an-t{font-size:clamp(19px,1.7vw,23px)!important}
+.auts li{padding:20px clamp(22px,2.4vw,30px) 20px clamp(20px,2vw,26px)!important;gap:16px!important;overflow-wrap:anywhere}
+.auts{display:flex!important;flex-wrap:wrap;gap:16px!important;grid-template-columns:none!important}
+.auts li{flex:1 1 auto;white-space:normal;overflow-wrap:normal!important;padding:20px 24px!important;gap:16px!important}
+.auts li:nth-child(2){white-space:nowrap}
+@media(min-width:1000px){.auts{flex-wrap:nowrap!important}.auts li{flex:1 1 0;min-width:0}.auts li:nth-child(2){flex:0 0 auto}}
+@media(max-width:480px){.auts li{flex:1 1 100%;padding-left:16px!important;padding-right:16px!important;gap:12px!important}.auts li>.i2{--s:40px!important}.auts li{white-space:nowrap}}
+.prox li{text-align:center!important}
+.prox li .prox-ic{margin-left:auto!important;margin-right:auto!important;display:block}
+.prox li .an-t{display:block;text-align:center}

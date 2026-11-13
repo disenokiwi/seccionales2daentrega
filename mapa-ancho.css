@@ -1,0 +1,2 @@
+/* mismo ancho de lectura que las otras pestañas: contenido de 1120 px centrado */
+.sec,.resumen,.sec-dos,.site-footer{padding-left:max(var(--gutter),calc((100% - 1120px)/2));padding-right:max(var(--gutter),calc((100% - 1120px)/2))}

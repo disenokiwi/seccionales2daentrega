@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 1920 1080">
+  <!-- Generator: Adobe Illustrator 30.8.1, SVG Export Plug-In . SVG Version: 2.1.4 Build 1)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: url(#Summer_2);
+      }
+    </style>
+    <radialGradient id="Summer_2" data-name="Summer 2" cx="1044" cy="457.1" fx="1044" fy="457.1" r="969.3" gradientTransform="translate(-34.3 -37.8) scale(1 1.1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#c8009b"/>
+      <stop offset="0" stop-color="#ba0090"/>
+      <stop offset=".2" stop-color="#89006a"/>
+      <stop offset=".3" stop-color="#5f0049"/>
+      <stop offset=".4" stop-color="#3c002f"/>
+      <stop offset=".6" stop-color="#22001a"/>
+      <stop offset=".7" stop-color="#0f000b"/>
+      <stop offset=".8" stop-color="#030002"/>
+      <stop offset="1" stop-color="#000"/>
+    </radialGradient>
+  </defs>
+  <rect class="st0" width="1920" height="1095.9"/>
+</svg>

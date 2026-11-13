@@ -1,0 +1,207 @@
+/* Segunda entrega: menú, gráficos y bloques nuevos (se carga después de style.css) */
+.masthead{gap:16px}
+.menu{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+.menu a{padding:9px 16px;border-radius:999px;border:1px solid transparent;font-size:13.5px;font-weight:700;color:rgba(255,255,255,.82);text-decoration:none;white-space:nowrap;transition:background .15s,border-color .15s,color .15s}
+.menu a:hover{border-color:rgba(255,255,255,.45);color:#fff}
+.menu a.on{background:var(--olive);color:#201061;border-color:var(--olive)}
+@media(max-width:720px){.masthead{flex-wrap:wrap;row-gap:12px}.menu{width:100%;justify-content:flex-start;overflow-x:auto;flex-wrap:nowrap;padding-bottom:2px}.menu a{padding:8px 13px;font-size:13px}}
+
+/* viñetas anidadas */
+.bul strong{color:#fff;font-weight:800}
+.bul.tree{max-width:none}
+.bul.tree ul.bul{margin-top:12px}
+.bul.tree li.li-chart{padding-left:0}
+.bul.tree li.li-chart::before{display:none}
+.bul.tree li.li-chart .chart{margin-top:6px}
+.sec .block .bul{margin-top:18px}
+
+/* dumbbell: el correísmo con y sin su marca */
+.dumb-grid{display:grid;grid-template-columns:minmax(0,1.9fr) minmax(220px,1fr);gap:clamp(24px,4vw,56px);margin-top:18px}
+.dumb .fila{display:grid;grid-template-columns:118px minmax(0,1fr) 76px;align-items:center;gap:14px;padding:11px 0;border-top:1px solid var(--line)}
+.dumb .fila.head{border-top:0;padding:0 0 10px;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text-3)}
+.dumb .fila.head span:last-child{text-align:right}
+.dumb .fila.axis{border-top:1px solid var(--line);padding-top:6px}
+.dn{font-weight:800;font-size:15px;text-align:right}
+.dt{position:relative;height:18px}
+.dt .dl{position:absolute;top:50%;height:6px;transform:translateY(-50%);background:rgba(255,255,255,.24);border-radius:3px;transform-origin:left center}
+.dt .d19,.dt .d23{position:absolute;top:50%;width:16px;height:16px;border-radius:50%;transform:translate(-50%,-50%)}
+.dt .d19{background:#b9c1ca}.dt .d23{background:#00c3ff}
+.dt.ax{height:18px}.dt.ax span{position:absolute;top:0;transform:translateX(-50%);font-size:12px;color:var(--text-3)}
+.dv{font-weight:800;color:#00c3ff;text-align:right;font-variant-numeric:tabular-nums}.dv.neg{color:#ff7a7a}
+.dumb .leyenda i.c19,.dumb .leyenda i.c23{display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:9px;vertical-align:-2px}
+.dumb .leyenda i.c19{background:#b9c1ca}.dumb .leyenda i.c23{background:#00c3ff}
+.dumb-side .ds+.ds{margin-top:34px;padding-top:30px;border-top:1px solid var(--line)}
+.dk{display:block;font-weight:800;font-size:15px;color:var(--text-3);margin-bottom:10px}
+.dbig{display:block;font-size:clamp(34px,4vw,52px);font-weight:800;line-height:1;color:#00c3ff;letter-spacing:-.02em}
+.dbig.g{color:#b9c1ca}
+.dtx{display:block;margin-top:12px;font-size:15px;line-height:1.4;color:var(--text-2)}
+.dtx.s{font-size:13px;color:var(--text-3)}
+.dpair{display:flex;align-items:center;gap:18px;margin-top:22px}
+.darr{font-size:22px;color:var(--text-3)}
+@media(max-width:860px){.dumb-grid{grid-template-columns:1fr}.dumb .fila{grid-template-columns:96px minmax(0,1fr) 52px;gap:10px}.dumb-side{display:grid;gap:0}}
+
+/* capitales que ganó el correísmo */
+.cap .fila{display:grid;grid-template-columns:minmax(120px,1fr) minmax(0,1.1fr) minmax(0,1fr) minmax(0,2.1fr);gap:18px;align-items:center;padding:13px 0;border-top:1px solid var(--line)}
+.cap .fila.head{border-top:0;padding:14px 0 10px;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text-3)}
+.cc strong{display:block;font-size:17px;font-weight:800}
+.cc small{display:block;color:var(--text-3);font-size:13px}
+.cv{display:flex;align-items:center;gap:10px}
+.cv i{display:block;height:22px;min-width:6px;background:var(--accent-blue,#3673ef);border-radius:3px;transform-origin:left center}
+.cv span{font-weight:800;font-variant-numeric:tabular-nums}
+.cv.rojo i{background:#e04848}.cv.rojo span{color:#ff7a7a}
+.ca{color:var(--text-2)}
+.ck{display:flex;align-items:center;gap:12px;flex-wrap:nowrap}.ck .cn{min-width:0}
+.bd{font-style:normal;font-size:12px;font-weight:800;padding:5px 12px;border-radius:6px;white-space:nowrap}
+.bd.re{background:#00a6e3;color:#fff}.bd.nu{background:rgba(0,195,255,.2);color:#c8eeff}.bd.no{background:rgba(255,255,255,.14);color:#fff}
+.cn.b{font-weight:800}.cn.sin{color:var(--text-3)}.cn .par{font-weight:inherit}
+@media(max-width:860px){
+  .cap .fila.head{display:none}
+  .cap .fila{grid-template-columns:1fr;gap:10px;padding:18px 0}
+  .cap .fila>[data-l]:not(.cc)::before{content:attr(data-l);display:block;margin-bottom:4px;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text-3)}
+  .cap .fila .cv{flex-wrap:wrap}
+}
+
+/* el partido de gobierno en las seccionales */
+.gob .fila{display:grid;grid-template-columns:64px minmax(150px,1.1fr) minmax(0,2.3fr) 28px minmax(0,2fr) 34px minmax(0,1.5fr);gap:14px;align-items:center;padding:16px 0;border-top:1px solid var(--line)}
+.gob .fila.head{border-top:0;padding:14px 0 6px;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text-3)}
+.gy{font-size:22px;font-weight:800;color:var(--lavender)}
+.gp strong{display:block;font-size:17px;font-weight:800}.gp small{display:block;color:var(--text-3);font-size:13px}
+.gseg{position:relative;display:grid;grid-template-columns:repeat(23,minmax(0,1fr));gap:3px;height:34px}
+.gseg i{display:block;background:rgba(255,255,255,.12);border-radius:1px}
+.gseg i.on{background:var(--lavender);transform-origin:bottom}
+.gal{position:relative;height:28px;background:rgba(255,255,255,.12);border-radius:3px}
+.gal i{display:block;height:100%;background:var(--lavender);border-radius:3px;transform-origin:left center}
+.gn{font-weight:800;font-size:18px}
+.gnota{color:var(--text-3);font-size:13px;line-height:1.35}
+.gob .fila.adn .gy{color:var(--olive)}
+.gob .fila.adn .gnota{color:var(--olive)}
+.gseg.q i{background:none;outline:1px dashed var(--olive);outline-offset:-1px}
+.gal.q{background:none;border:1px dashed var(--olive)}
+.qm{position:absolute;inset:0;display:grid;place-items:center;font-weight:800;font-size:20px;color:var(--olive)}
+@media(max-width:860px){
+  .gob .fila.head{display:none}
+  .gob .fila{grid-template-columns:52px minmax(0,1fr) 34px;grid-template-areas:"y p p" "s s n1" "a a n2" "t t t";row-gap:12px}
+  .gob .fila>.gy{grid-area:y}.gob .fila>.gp{grid-area:p}
+  .gob .fila>.gseg{grid-area:s}.gob .fila>.gn:nth-of-type(1){grid-area:n1}
+  .gob .fila>.gal{grid-area:a}.gob .fila>.gn:nth-of-type(2){grid-area:n2}
+  .gob .fila>.gnota{grid-area:t}
+  .gob .fila>.gseg::before{content:"Prefecturas (de 23)";position:absolute;top:-17px;left:0;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-3)}
+  .gob .fila>.gal::before{content:"Alcaldías (de 221)";position:absolute;top:-17px;left:0;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-3)}
+  .gob .fila>.gseg{margin-top:14px}.gob .fila>.gal{margin-top:14px}
+}
+
+/* cita de Noboa */
+.cita{margin:34px 0 0;padding:clamp(22px,3vw,34px) clamp(22px,3.4vw,40px);border-left:4px solid var(--yellow);background:rgba(255,255,255,.05);border-radius:0 18px 18px 0}
+.cita p{margin:0;font-size:clamp(19px,2.1vw,27px);font-weight:600;line-height:1.38;color:#fff}
+.cita cite{display:block;margin-top:16px;font-style:normal;font-weight:800;color:var(--yellow)}
+
+/* mapa de cantones de Pachakutik (imagen del Word sobre fondo claro) */
+.mapa-img{margin:32px 0 0;background:#fff;border-radius:20px;padding:clamp(12px,2vw,26px)}
+.mapa-img img{display:block;width:100%;height:auto}
+
+/* CPCCS */
+.lead-top{margin-top:0}
+.auts{list-style:none;padding:0;margin:26px 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.auts li{display:flex;align-items:center;gap:14px;padding:18px 20px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.05);font-weight:700;line-height:1.3}
+.auts .ico{--ic:var(--yellow);width:46px;height:46px}
+.auts .ico .ico-ph{width:20px;height:20px}
+.aprob,.cand-top{display:flex;align-items:center;gap:clamp(20px,3vw,44px);margin-top:36px;padding:clamp(22px,3vw,36px);border:1px solid var(--line);border-radius:20px;background:rgba(255,255,255,.05)}
+.cand-top{margin-top:0}
+.aprob .dv-n,.cand-top .dv-n{flex:none;font-size:clamp(52px,7vw,96px);font-weight:800;line-height:.9;letter-spacing:-.03em;margin:0}
+.aprob .dv-n{color:#ff00a4}.cand-top .dv-n{color:var(--olive)}
+.aprob p,.cand-top p{margin:0;font-size:clamp(16px,1.5vw,20px);line-height:1.5;color:var(--text-2)}
+.paps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:20px}
+.pap{padding:clamp(20px,2.4vw,30px);border:1px solid var(--line);border-radius:20px;background:rgba(255,255,255,.05)}
+.pn{display:block;font-size:clamp(52px,6vw,80px);font-weight:800;line-height:.9;letter-spacing:-.03em;color:var(--olive)}
+.pt{display:block;margin:14px 0 20px;font-size:16px;font-weight:700;line-height:1.35;color:#fff}
+.pr{display:flex;align-items:center;gap:10px;height:22px;margin-top:8px}
+.pr em{flex:none;width:38px;font-style:normal;font-size:12px;color:var(--text-3)}
+.pr i{display:block;height:14px;min-width:4px;border-radius:3px;background:var(--olive);transform-origin:left center}
+.pr.o i{background:rgba(255,255,255,.32)}
+.pr b{font-size:13px;font-weight:600;color:var(--text-2);white-space:nowrap}
+.papeletas-ph{display:grid;place-items:center;min-height:clamp(200px,24vw,320px);margin-top:28px;border:2px dashed rgba(255,255,255,.35);border-radius:20px;color:var(--text-3);font-size:15px;text-align:center;padding:20px}
+.s2 .callout{margin-top:28px}
+@media(max-width:860px){.paps{grid-template-columns:1fr}.aprob,.cand-top{flex-direction:column;align-items:flex-start}}
+
+/* animaciones al entrar en pantalla */
+.js-anim .dumb .dl,.js-anim .cv i,.js-anim .gal i,.js-anim .pr i{transition:transform 1.1s cubic-bezier(.2,.7,.2,1)}
+.js-anim .gseg i.on{transition:transform .5s cubic-bezier(.3,1.3,.5,1);transition-delay:calc(var(--k,0)*40ms)}
+.js-anim .dumb:not(.in) .dl,.js-anim .cap:not(.in) .cv i,.js-anim .gob:not(.in) .gal i,.js-anim .pap:not(.in) .pr i{transform:scaleX(0)}
+.js-anim .dumb .dl{transform:translateY(-50%) scaleX(1)}
+.js-anim .dumb:not(.in) .dl{transform:translateY(-50%) scaleX(0)}
+.js-anim .gob:not(.in) .gseg i.on{transform:scaleY(0)}
+.js-anim .dumb .d19,.js-anim .dumb .d23{transition:opacity .6s ease .5s}
+.js-anim .dumb:not(.in) .d19,.js-anim .dumb:not(.in) .d23{opacity:0}
+.bul>li{min-width:0}
+@media(max-width:720px){.bul.tree li{padding-left:20px}.bul.tree li::before{width:13px;height:13px;top:7px}.bul.tree li.li-chart{padding-left:0}.menu a{padding:8px 11px;font-size:12.5px}.menu{gap:3px}}
+@media(max-width:420px){.menu a{padding:8px 9px;font-size:11.5px}.menu{gap:2px}}
+
+/* Revolución Ciudadana: diagramación en tarjetas */
+.rc-intro{padding:clamp(24px,3vw,38px);border:1px solid var(--line);border-radius:22px;background:linear-gradient(135deg,rgba(255,0,164,.14),rgba(255,255,255,.04))}
+.rc-main{margin:0;font-size:clamp(20px,2.2vw,28px);line-height:1.3;color:var(--text-2);font-weight:400}
+.rc-main strong{color:#fff;font-weight:800}
+.rc-sub{margin:18px 0 0;padding-top:18px;border-top:1px solid var(--line);font-size:clamp(16px,1.4vw,18px);line-height:1.55;color:var(--text-2)}
+.rc-sub .rc-n{color:var(--yellow);font-weight:800;background:none;padding:0;white-space:normal}
+.rc-h{margin:clamp(34px,4vw,50px) 0 18px;font-size:clamp(17px,1.7vw,21px);font-weight:800;line-height:1.3;color:#fff;display:flex;align-items:flex-start;gap:12px}
+.rc-h::before{content:"";flex:none;width:4px;align-self:stretch;min-height:1.3em;border-radius:2px;background:#ff00a4}
+.rc-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.rc-card{position:relative;padding:clamp(20px,2.4vw,28px);border:1px solid var(--line);border-radius:20px;background:rgba(255,255,255,.05)}
+.rc-card p{margin:0;font-size:clamp(15.5px,1.3vw,17px);line-height:1.55;color:var(--text-2)}
+.rc-card p strong{color:#fff;font-weight:800}
+.rc-card .rc-nota{margin-top:16px;padding-top:14px;border-top:1px dashed rgba(255,255,255,.28);font-size:clamp(14.5px,1.2vw,16px)}
+.rc-i{display:block;width:22px;height:22px;margin-bottom:14px;background:var(--yellow);-webkit-mask:url(brand/asterisco.svg) center/contain no-repeat;mask:url(brand/asterisco.svg) center/contain no-repeat}
+.rc-wide{margin-top:20px}
+.rc-grid+.chart,.rc-intro+h4+.rc-grid+.chart{margin-top:22px}
+@media(max-width:860px){.rc-grid{grid-template-columns:1fr}}
+
+/* mapa de cantones de Pachakutik (rehecho con los colores de las organizaciones) */
+.pk-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:center;margin-top:18px}
+.pk-mapa img{display:block;width:100%;height:auto;max-height:78vh;object-fit:contain;margin:0 auto}
+.pk-g+.pk-g{margin-top:26px}
+.pk-g h5{display:flex;align-items:center;gap:12px;margin:0 0 14px;font-size:clamp(18px,1.7vw,22px);font-weight:800;color:#fff}
+.sw{flex:none;display:block;width:26px;height:18px;border-radius:3px}
+.sw.adn{background:#8d15ff}
+.sw.rc{background:#00c3ff}
+.pk-g ul{list-style:none;margin:0;padding:0;columns:2;column-gap:28px}
+.pk-g li{break-inside:avoid;padding:5px 0;font-size:16px;color:var(--text-2)}
+.pk-iza{margin:28px 0 0;font-size:clamp(18px,1.7vw,22px);font-weight:800;color:#e38bff}
+@media(max-width:860px){.pk-grid{grid-template-columns:1fr}.pk-mapa{max-width:520px;margin:0 auto}}
+.pk-grid{grid-template-columns:minmax(0,1.4fr) minmax(0,1fr)}@media(max-width:860px){.pk-grid{grid-template-columns:1fr}}
+
+/* fotos en el mapa de Pachakutik y en la cita de Noboa */
+.pk-g h5 .sw{margin-left:auto}
+.pk-av{flex:none;width:52px;height:52px;border-radius:50%;object-fit:cover;border:2px solid rgba(255,255,255,.35)}
+.cita{display:flex;align-items:center;gap:clamp(18px,2.4vw,30px)}
+.cita-av{flex:none;width:clamp(72px,8vw,104px);height:clamp(72px,8vw,104px);border-radius:50%;object-fit:cover;border:3px solid var(--yellow)}
+@media(max-width:560px){.cita{flex-direction:column;align-items:flex-start}}
+
+/* candidatos al CPCCS */
+.cands{margin-top:34px}
+.ctabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.ctabs button{display:inline-flex;align-items:center;gap:10px;padding:11px 20px;border-radius:999px;border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;font:inherit;font-size:15px;font-weight:700;cursor:pointer;transition:background .15s,border-color .15s}
+.ctabs button em{font-style:normal;font-size:12.5px;padding:2px 9px;border-radius:999px;background:rgba(255,255,255,.14)}
+.ctabs button:hover{border-color:#fff}
+.ctabs button[aria-selected=true]{background:var(--olive);border-color:var(--olive);color:#201061}
+.ctabs button[aria-selected=true] em{background:rgba(32,16,97,.14)}
+.cgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(168px,1fr));gap:clamp(14px,1.8vw,22px)}
+.cgrid[hidden]{display:none}
+.cd{display:block;padding:0;border:0;background:none;color:#fff;font:inherit;text-align:left;cursor:pointer}
+.cph{position:relative;display:block;aspect-ratio:4/5;border-radius:16px;overflow:hidden;background:linear-gradient(160deg,#3a2aa0,#241470);border:1px solid rgba(255,255,255,.18);transition:transform .2s,border-color .2s}
+.cph img{display:block;width:100%;height:100%;object-fit:cover;object-position:top}
+.cd:hover .cph,.cd:focus-visible .cph{transform:translateY(-3px);border-color:var(--olive)}
+.cd:focus-visible{outline:2px solid var(--olive);outline-offset:4px;border-radius:16px}
+.cnum{position:absolute;left:10px;top:10px;min-width:30px;height:30px;padding:0 8px;display:grid;place-items:center;border-radius:15px;background:var(--olive);color:#201061;font-size:14px;font-weight:800}
+.cname{display:block;margin-top:10px;font-size:15px;font-weight:700;line-height:1.3}
+.nofoto{display:block;width:100%;height:100%;min-height:80px;background:rgba(255,255,255,.28);-webkit-mask:url(brand/asterisco.svg) center/34% no-repeat;mask:url(brand/asterisco.svg) center/34% no-repeat}
+.cdlg{width:min(720px,calc(100vw - 32px));max-height:calc(100vh - 48px);padding:0;border:1px solid rgba(255,255,255,.25);border-radius:24px;background:#241470;color:#fff;overflow:auto}
+.cdlg::backdrop{background:rgba(10,5,40,.72);backdrop-filter:blur(3px)}
+.cd-x{position:sticky;top:12px;float:right;margin:12px 12px 0 0;width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,.35);background:rgba(32,16,97,.85);color:#fff;font-size:22px;line-height:1;cursor:pointer;z-index:2}
+.cd-top{display:flex;align-items:center;gap:22px;padding:clamp(22px,3vw,34px) clamp(22px,3vw,34px) 12px}
+.cd-ph{flex:none;width:clamp(104px,16vw,150px);aspect-ratio:4/5;border-radius:16px;overflow:hidden;background:linear-gradient(160deg,#3a2aa0,#241470);border:1px solid rgba(255,255,255,.2)}
+.cd-ph img{display:block;width:100%;height:100%;object-fit:cover;object-position:top}
+.cd-tag{margin:0 0 8px;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--olive)}
+.cd-top h3{margin:0;font-size:clamp(22px,3vw,30px);font-weight:800;line-height:1.15}
+.cd-bul{list-style:none;margin:0;padding:6px clamp(22px,3vw,34px) clamp(24px,3vw,34px);display:grid;gap:12px}
+.cd-bul li{position:relative;padding-left:26px;font-size:16px;line-height:1.55;color:var(--text-2)}
+.cd-bul li::before{content:"";position:absolute;left:0;top:6px;width:14px;height:14px;background:var(--yellow);-webkit-mask:url(brand/asterisco.svg) center/contain no-repeat;mask:url(brand/asterisco.svg) center/contain no-repeat}
+@media(max-width:560px){.cgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.cd-top{flex-direction:column;align-items:flex-start}.ctabs button{padding:9px 14px;font-size:14px}}
