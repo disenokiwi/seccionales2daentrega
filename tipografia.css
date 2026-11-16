@@ -101,3 +101,172 @@ strong,b.rc-n,.lead-b{font-weight:800}
 .sig-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.3)}
 @media(max-width:720px){.sig-btn{width:100%;max-width:420px;justify-content:center}}
 @media(max-width:720px){.sig-wrap{padding:28px 16px 36px}.sig-btn{width:auto!important;max-width:none!important;padding:11px 22px;gap:8px;font-size:15px}}
+/* === ajustes 16-nov === */
+/* gráfico 2019 vs 2023: dos colores que se distinguen */
+.dt .d19,.dumb .leyenda i.c19{background:#ffbf5e!important}
+.dbig.g{color:#ffbf5e!important}
+.dt .d19,.dt .d23{width:20px;height:20px;box-shadow:0 0 0 3px #201061}
+.dt .dl{height:8px;background:rgba(255,255,255,.5)!important}
+.dumb .leyenda span{font-weight:600;color:#fff}
+.dumb .leyenda i.c19,.dumb .leyenda i.c23{width:16px;height:16px}
+/* tarjetas RC: negritas más marcadas */
+.rc-card.ch p strong,.rc-card.ch .rc-nota strong{font-weight:800!important}
+.rc-card.ch.ch2 .rc-nota{background:rgba(32,16,97,.1);border-top:0!important;border-radius:14px;padding:16px 18px!important;margin-top:8px}
+/* PSC: foto a un lado, bastiones apilados */
+.psc-split{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:20px;align-items:stretch;margin-top:18px}
+.psc-split .psc-foto{margin:0!important;height:100%}
+.psc-split .psc-foto img{height:100%!important;min-height:300px;object-position:center 40%}
+.psc-split .rc-grid{display:grid;grid-template-columns:1fr!important;gap:16px;margin:0!important;align-content:stretch}
+@media(max-width:860px){.psc-split{grid-template-columns:1fr}.psc-split .psc-foto img{height:220px!important;min-height:0}}
+/* aviso del mapa */
+.cartogram-head .cartogram-sub{background:var(--olive);color:#201061!important;font-weight:800;font-size:var(--fs-b)!important;padding:14px 26px;border-radius:999px;gap:12px;flex-direction:row!important;text-align:center;box-shadow:0 0 0 0 rgba(221,240,134,.55);animation:hintpulse 2.4s ease-out infinite}
+.cartogram-head .cartogram-sub .ic-click{order:2;color:#201061;width:26px;height:26px}
+.cartogram-head .cartogram-sub span{order:1}
+@keyframes hintpulse{0%{box-shadow:0 0 0 0 rgba(221,240,134,.5)}70%,100%{box-shadow:0 0 0 14px rgba(221,240,134,0)}}
+@media(prefers-reduced-motion:reduce){.cartogram-head .cartogram-sub{animation:none}}
+/* botón largo a CPCCS: puede ir en dos líneas */
+.sig-btn{text-align:center}
+@media(max-width:720px){.sig-btn{max-width:100%!important;width:100%!important;padding:14px 20px}}
+.rc-card.ch.ch1{justify-content:center}
+.psc-split .rc-card{align-items:center!important}
+/* tarjetas RC: espacio para foto arriba, sin iconos */
+.rc-card.ch{padding:0!important;gap:0!important;overflow:hidden;align-items:stretch!important;justify-content:flex-start!important}
+.rc-card.ch .ch-foto{align-self:stretch;width:100%;aspect-ratio:16/9;background:rgba(32,16,97,.14);background-size:cover;background-position:center;margin:0}
+.rc-card.ch>p,.rc-card.ch>.rc-nota{margin-left:clamp(26px,3vw,38px);margin-right:clamp(26px,3vw,38px)}
+.rc-card.ch>p:first-of-type{margin-top:clamp(22px,2.4vw,30px)}
+.rc-card.ch>p:last-child{margin-bottom:clamp(26px,3vw,38px)}
+.rc-card.ch.ch2 .rc-nota{margin-top:20px;margin-bottom:clamp(26px,3vw,38px)}
+.rc-card.ch.ch1{justify-content:flex-start!important}
+.psc-split .rc-card{align-content:center!important}.psc-split .rc-card>p{align-self:center!important;margin-top:0!important;margin-bottom:0!important}.psc-split .rc-card>.i2{align-self:center!important}
+.psc-split .rc-card{display:flex!important;flex-direction:row!important;align-items:center!important;gap:20px!important}.psc-split .rc-card>.i2{flex:none;grid-row:auto!important}.psc-split .rc-card>p{flex:1}
+.rc-card.ch .rc-nota>strong:first-child{font-style:italic}
+/* sección Revolución Ciudadana: celeste de la marca */
+.sub.k3{--sc:#00c3ff}
+.sub.k3::before{background-image:url(brand/asterisco-blanco.svg)}
+.rc-sec .rc-intro{border-color:rgba(0,195,255,.45);background:linear-gradient(135deg,rgba(0,195,255,.2),rgba(255,255,255,.04))}
+.rc-sec .rc-subrow{border-top-color:rgba(0,195,255,.35)}
+.rc-sec .rc-n,.rc-sec .rc-sub .rc-n{color:#00c3ff!important}
+.rc-sec .rc-h span,.rc-sec .rc-h strong{color:#fff}
+/* sección Partido Social Cristiano: amarillo de la marca */
+.sub.k4{--sc:#fdc303}
+.sub.k4::before{background-image:url(brand/asterisco-azul.svg)}
+.psc-sec .pt-intro{border-color:rgba(253,195,3,.5);background:linear-gradient(135deg,rgba(253,195,3,.2),rgba(255,255,255,.04))}
+.psc-sec .psc-fin strong{color:#fdc303}
+/* Pachakutik: resaltados en rosado */
+.pk-sec .rc-n,.pk-sec .pt-intro .rc-n{color:#ff00a4!important}
+/* Pachakutik en rosado: título, asterisco y Leonidas Iza */
+.sub.k2{--sc:#ff00a4}
+.sub.k2::before{background-image:url(brand/asterisco-blanco.svg)}
+.rc-card.pc-pk{background:#ff00a4;color:#fff}
+.pg-pk{--pc:#ff00a4!important;background:color-mix(in srgb,#ff00a4 34%,#201061)!important}
+/* ADN: intro sin caja, logo más grande, primera oración en negrita */
+section[aria-labelledby="t-adn"] .pt-intro{background:none!important;border:0!important;box-shadow:none!important;padding:0!important;gap:clamp(24px,3vw,40px)}
+section[aria-labelledby="t-adn"] .pt-intro .pl-w{width:clamp(130px,13vw,170px)!important;height:clamp(130px,13vw,170px)!important;flex:none}
+section[aria-labelledby="t-adn"] .pt-intro p strong{font-weight:800;color:#fff}
+section[aria-labelledby="t-adn"] .pt-intro .pl-foto{padding:0!important;object-fit:cover;object-position:center 22%;border:4px solid #fff}
+section[aria-labelledby="t-adn"] .pt-intro.pt-2{margin-top:clamp(18px,2.4vw,30px)}
+/* ADN: dos columnas, cada una con su foto arriba del texto */
+.adn-duo{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,72px);align-items:start;margin:8px 0 clamp(26px,3vw,40px)}
+section[aria-labelledby="t-adn"] .adn-duo .pt-intro,section[aria-labelledby="t-adn"] .adn-duo .pt-intro.pt-2{flex-direction:column!important;align-items:center;text-align:center;margin:0!important;gap:20px}
+section[aria-labelledby="t-adn"] .adn-duo .pt-intro .pl-w{margin:0}
+section[aria-labelledby="t-adn"] .adn-duo .pt-intro p{margin:0}
+@media(max-width:860px){.adn-duo{grid-template-columns:1fr;gap:34px}}
+/* ADN: logo + frase; texto a la izquierda y dos tarjetas con foto/logo a la derecha */
+.adn-top{display:flex;align-items:center;gap:clamp(24px,3.5vw,48px);margin:8px 0 clamp(34px,4.5vw,60px)}
+.adn-logo{flex:none;width:clamp(120px,13vw,160px);height:clamp(120px,13vw,160px);border-radius:50%;background:#fff;padding:14px;object-fit:contain}
+.adn-top p,.adn-l>p{margin:0;font-size:var(--fs-h4)!important;line-height:1.45;font-weight:400;color:#fff}
+.adn-top p strong{font-weight:800}
+.adn-r2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:clamp(28px,5vw,72px);align-items:center;margin-bottom:clamp(26px,3vw,40px)}
+.adn-stats{display:grid;gap:clamp(22px,2.6vw,32px);padding-left:48px}
+.adn-stat{position:relative;display:grid;grid-template-columns:auto auto minmax(80px,1fr);align-items:center;gap:6px 18px;padding:26px 28px 26px 74px;border:1px solid rgba(255,255,255,.2);border-radius:22px;background:rgba(255,255,255,.1)}
+.adn-av{position:absolute;left:-48px;top:50%;transform:translateY(-50%);width:clamp(88px,8vw,104px);height:clamp(88px,8vw,104px);border-radius:50%;object-fit:cover;object-position:center 22%;border:4px solid #fff;background:#fff}
+.adn-av-logo{object-fit:contain;padding:14px}
+.as-n{font-size:var(--fs-num);font-weight:800;line-height:.9;letter-spacing:-.03em;color:#ddf086}
+.as-t{font-size:var(--fs-l);font-weight:800;line-height:1.2;color:#fff}
+.as-bar{height:14px;border-radius:999px;background:rgba(255,255,255,.2);overflow:hidden}
+.as-bar i{display:block;height:100%;background:#ddf086;border-radius:999px}
+@media(max-width:860px){
+.adn-top{flex-direction:column;text-align:center}
+.adn-r2{grid-template-columns:1fr;text-align:center}
+.adn-stats{padding-left:48px;text-align:left}
+.adn-stat{grid-template-columns:auto 1fr;padding:22px 20px 22px 66px}
+.as-bar{grid-column:1/-1}
+}
+.as-t{max-width:7.5em}
+.adn-stat{grid-template-columns:auto auto 1fr}
+.as-bar{min-width:90px}
+@media(max-width:860px){.as-t{max-width:none}}
+/* tarjetas ADN/Alianza PAIS en celeste RC; texto de la derecha más pequeño */
+.adn-l>p strong{font-weight:800}
+.adn-stat{background:rgba(0,195,255,.16);border-color:rgba(0,195,255,.5)}
+.as-n{color:#00c3ff}
+.as-bar i{background:#00c3ff}
+.as-bar{background:rgba(0,195,255,.22)}
+.as-t{font-size:var(--fs-b)}
+.sub.k5{--sc:#8d15ff}
+.sub.k5::before{background-image:url(brand/asterisco-blanco.svg)}
+.adn-dif{margin-top:clamp(28px,4vw,52px)}
+.adn-dif .lead{max-width:62ch;margin-left:auto;margin-right:auto}
+.adn-dif{margin-bottom:clamp(22px,3vw,36px)}
+.adn-dif .lead{max-width:none!important;padding:clamp(24px,3vw,38px) clamp(22px,3.4vw,48px);border:1px solid rgba(141,21,255,.55);border-radius:22px;background:linear-gradient(135deg,rgba(141,21,255,.24),rgba(255,255,255,.04))}
+/* cita de Noboa: resaltado en morado */
+.cita{border-left-color:#8d15ff!important;border-left-width:6px}
+.cita cite{color:#d4bbff!important}
+.cita p strong{color:#d4bbff}
+.psc-split .psc-foto img{object-position:62% center!important}
+.adn-av:not(.adn-av-logo){object-position:center 18%!important}
+.adn-av.adn-av-logo{padding:19%!important;box-sizing:border-box}
+.adn-av.adn-av-logo{padding:clamp(15px,1.5vw,19px)!important;box-sizing:border-box!important;width:clamp(88px,8vw,104px)!important;height:clamp(88px,8vw,104px)!important}
+/* cuadro del partido de gobierno: foto de cada presidente */
+.gpf{flex:none;width:clamp(76px,7vw,92px);height:clamp(76px,7vw,92px);border-radius:50%;object-fit:cover;object-position:center 20%;border:3px solid #fff;background:#fff}
+@media(min-width:861px){.gob .fila{grid-template-columns:64px minmax(330px,1.8fr) minmax(0,2fr) 28px minmax(0,1.6fr) 34px minmax(0,1.3fr)!important}}
+@media(max-width:860px){.gpf{width:64px;height:64px}}
+@media(min-width:861px){.gob .fila{grid-template-columns:64px clamp(300px,28vw,340px) minmax(0,2fr) 28px minmax(0,1.6fr) 34px minmax(0,1.3fr)!important}.gob .fila.head span{white-space:nowrap}}
+.pk-reto{max-width:70ch;margin:clamp(24px,3vw,40px) auto!important}
+/* RC: texto de la suspensión sobre las tarjetas; tarjeta naranja igual a la morada */
+.rc-comp{max-width:62ch;margin:clamp(18px,2.4vw,28px) auto clamp(26px,3vw,40px)!important}
+.rc-comp strong{font-weight:800}
+.rc-card.ch.ch2 .rc-nota{background:none!important;border:0!important;border-radius:0!important;padding:0!important;margin:clamp(22px,2.4vw,30px) clamp(26px,3vw,38px) clamp(26px,3vw,38px)!important;font-size:var(--fs-b)!important;line-height:1.55}
+.rc-comp .rc-ast{display:inline-block;vertical-align:-3px;margin-right:10px;width:24px;height:24px;background:#00c3ff}
+.rc-card.ch .rc-nota>strong:first-child{font-style:normal!important;display:block;font-size:var(--fs-l);font-weight:800;margin-bottom:6px;line-height:1.3}
+/* alcaldes: fotos en círculo */
+.mayors img{width:min(100%,clamp(120px,14vw,200px))!important;margin:0 auto;border-radius:50%!important;border:3px solid rgba(255,255,255,.85)!important;object-position:center 12%!important}
+/* tarjetas RC: celeste de RC y verde */
+.rc-card.ch.ch2{background:#00c3ff!important}
+.rc-card.ch.ch1{background:#ddf086!important}
+/* iconos de la sección RC en celeste */
+.rc-sec :not(.i2c)>.i2{--ic:#00c3ff!important;background:#00c3ff!important}
+.mayors img{width:min(100%,clamp(96px,10.5vw,150px))!important}
+.mayors img{width:min(100%,clamp(68px,6.8vw,96px))!important}
+.psc-split .psc-foto img{object-position:center 36%!important}
+/* bloque Alianza PAIS sobre fondo más oscuro */
+.adn-r2{background:#1a0c5a;border-radius:26px;padding:clamp(28px,3.6vw,52px) clamp(24px,3.4vw,48px)}
+@media(max-width:860px){.adn-r2{padding:28px 20px}}
+.adn-top p strong,.adn-top p em{font-style:normal!important}.adn-top p strong{font-weight:800}
+.adn-top p,.adn-l>p{font-size:var(--fs-l)!important}
+.adn-top{margin-bottom:clamp(14px,1.8vw,22px)!important}
+/* tarjetas Alianza PAIS: cifra grande + texto, barra debajo ocupando todo el ancho */
+@media(min-width:861px){
+.adn-stat{grid-template-columns:auto 1fr!important;grid-template-rows:auto auto;gap:12px 20px!important;padding:26px 30px 26px 76px!important;align-items:center}
+.adn-stat .as-n{font-size:clamp(64px,6.4vw,92px);grid-row:1;grid-column:1}
+.adn-stat .as-t{grid-row:1;grid-column:2;max-width:none;font-size:var(--fs-l)}
+.adn-stat .as-bar{grid-row:2;grid-column:1/-1;height:18px;min-width:0}
+}
+.adn-top p{font-size:var(--fs-h4)!important}
+@media(min-width:861px){
+.adn-r2{grid-template-columns:minmax(0,1.2fr) minmax(0,1fr)!important}
+.adn-stat .as-t{font-size:var(--fs-h4)!important;line-height:1.15}
+.adn-stat{padding-right:36px!important}
+}
+.adn-l{display:flex;flex-direction:column;justify-content:center}.adn-l .dv-people{margin-top:clamp(22px,2.6vw,34px)}.adn-l>p{margin:0}
+/* video de personas caminando al inicio de la sección 02 */
+section[aria-labelledby="t-adn"]{position:relative;overflow:hidden}
+.adn-hero{position:absolute;left:0;right:0;top:0;height:clamp(420px,46vw,620px);z-index:0;pointer-events:none;
+  -webkit-mask-image:linear-gradient(180deg,#000 0%,#000 55%,transparent 100%);mask-image:linear-gradient(180deg,#000 0%,#000 55%,transparent 100%)}
+.adn-hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 60%}
+.adn-hero .adn-tint{position:absolute;inset:0;background:#3673ef;mix-blend-mode:color}
+section[aria-labelledby="t-adn"]>.wrap{position:relative;z-index:1}
+@media(prefers-reduced-motion:reduce){.adn-hero video{display:none}}
+.adn-hero{opacity:.38}
+.adn-hero{opacity:.24!important}
+.adn-r2{background:rgba(26,12,90,.9)!important}
