@@ -54,7 +54,10 @@
 
   var selProv=null;
   function hayCartogramaApilado(){ return window.innerWidth<=880; }
-  function ver(){ if(hayCartogramaApilado()){ slot.scrollIntoView({behavior:'smooth',block:'start'}); } }
+  function altoCabecera(){ var h=document.querySelector('.site-header'); return (h?h.offsetHeight:0)+12; }
+  function irA(el,suave){ var y=Math.max(0,window.pageYOffset+el.getBoundingClientRect().top-altoCabecera()); window.scrollTo({top:y,behavior:suave?'smooth':'auto'}); }
+  /* lleva la vista al panel solo si hace falta (apilado en celular, o si el panel quedó arriba de la pantalla) */
+  function ver(primera){ var top=slot.getBoundingClientRect().top; if((primera&&hayCartogramaApilado())||top<altoCabecera()){ irA(slot,!!primera&&hayCartogramaApilado()); } }
 
   function filaHTML(c,i,lista){
     var logo=c.lg?'<img src="'+c.lg+'" alt="'+esc(c.o)+'" class="party-logo">':'<div class="party-logo-placeholder" aria-hidden="true">'+esc(ini(c.o))+'</div>';
@@ -93,11 +96,12 @@
   function abrir(g){
     var cod=codigoDe(g); if(!cod) return;
     provs.forEach(function(x){x.classList.remove('sel');}); g.classList.add('sel'); selProv=cod;
-    layout.classList.remove('solo'); panelProvincia(cod); ver();
+    layout.classList.remove('solo'); panelProvincia(cod); ver(true);
   }
   function cerrar(){
     provs.forEach(function(x){x.classList.remove('sel');}); selProv=null;
     slot.innerHTML=''; layout.classList.add('solo');
+    if(layout.getBoundingClientRect().top<altoCabecera()||layout.getBoundingClientRect().bottom<window.innerHeight*0.5){ irA(layout,false); }
   }
   provs.forEach(function(g){
     g.addEventListener('click',function(){ (g.classList.contains('sel'))?cerrar():abrir(g); });
