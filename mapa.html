@@ -106,7 +106,7 @@
 
   /* ficha de la candidatura */
   function modalHTML(c){
-    var foto=c.ft?'<img class="modal-photo" src="'+c.ft+'" alt="'+esc(c.n)+'">':'<div class="modal-photo-placeholder" aria-hidden="true">'+esc(ini(c.n))+'</div>';
+    var foto=c.ft?'<img class="modal-photo" src="'+c.ft+'" alt="'+esc(c.n)+'">':'<span class="modal-photo-placeholder" role="img" aria-label="Sin foto disponible"><svg width="56" height="56" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.6"/><path d="M4 20c0-4.4 3.6-7 8-7s8 2.6 8 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>';
     var rol=c.d==='P'?'Prefecto/Prefecta':'Alcalde/Alcaldesa';
     var vice=c.f?'<div class="modal-meta">'+(c.d==='P'?'Viceprefectura: ':'Suplente: ')+esc(c.f)+'</div>':'';
     var logo=c.lg?'<img src="'+c.lg+'" alt="" class="party-logo">':'';

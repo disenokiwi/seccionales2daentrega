@@ -325,3 +325,8 @@ section[aria-labelledby="t-adn"] .adn-dif+p.lead.block{text-align:center!importa
 .gob .fila>.gseg::before,.gob .fila>.gal::before{font-size:13px!important;letter-spacing:.04em!important}
 }
 .gd .gd-ic{--s:72px;--ic:#201061;background:#201061!important;flex:none}
+#perfil-modal .modal-photo{object-position:50% 8%!important}
+#perfil-modal .modal-photo-placeholder{width:100%!important;height:100%!important;border:0!important;border-radius:0!important;margin:0;display:block;box-sizing:border-box}
+#perfil-modal .modal-photo-placeholder{background:var(--surface2,#f6f4fb)!important;color:var(--dark-blue,#201061)}
+#perfil-modal .modal-photo-placeholder{display:flex!important;align-items:center;justify-content:center}
+#perfil-modal .modal-photo-placeholder{background:rgba(255,255,255,.12)!important;color:#d4bbff}
